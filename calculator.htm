@@ -689,6 +689,15 @@
                         Xərc: <span id="seoCostSummarySpan">0</span> AZN
                     </div>
                 </div>
+                <div>
+                    <div class="w-full mt-6">
+                        <h1 class="text-lg font-semibold mb-2">Elektron ticarət əlavələri</h1>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="basketFeatures"></div>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
+                        Xərc: <span id="basketCostSummarySpan">0</span> AZN
+                    </div>
+                </div>
             </div>
 
             <div class="md:w-[30%] w-full flex flex-col gap-10 bg-gray-50 p-6 rounded-lg shadow-md">
@@ -709,6 +718,10 @@
                     <div class="flex justify-between">
                         <span class="text-gray-500 font-bold">SEO:</span>
                         <span id="seoCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">Elektron ticarət əlavələri:</span>
+                        <span id="basketCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
                     </div>
                     <div class="mt-4 text-gray-600">Qeyd: Bu təxmini dəyərdir.</div>
                 </div>
@@ -767,6 +780,12 @@
             { id: 'advanced', label: '+20 Qabaqcıl Texnika', price: 70 },
             { id: 'sitemap', label: 'Sitemap', price: 30 },
         ];
+        const basketFeaturesData = [
+            { id: 'odenis', label: 'Ödəniş', price: 200 },
+            { id: 'basket', label: 'Səbət', price: 500 },
+            { id: 'liked', label: 'Bəyəndiklərim', price: 300 },
+            { id: 'filter', label: 'Filtr', price: 300 },
+        ];
         const extraFeaturesData = [
             { id: 'blog', label: 'Blog', price: 50 },
             { id: 'membership', label: 'Üzv girişi', price: 100 },
@@ -785,7 +804,6 @@
             { id: 'cart', label: 'Səbət', price: 80 },
             { id: 'products', label: 'Məhsullar', price: 60 },
             { id: 'wishlist', label: 'Bəyəndiklərim', price: 40 },
-            { id: 'filter', label: 'Filtr', price: 50 },
             { id: 'productDetails', label: 'Məhsul Haqqında', price: 70 }
         ];
         const pageCountInput = document.getElementById("pageCount");
@@ -794,11 +812,13 @@
         const designComplexityValue = document.getElementById("designComplexityValue");
         const extraFeaturesContainer = document.getElementById("extraFeatures");
         const seoFeaturesContainer = document.getElementById("seoFeatures");
+        const basketFeaturesContainer = document.getElementById("basketFeatures");
         const totalCostSpan = document.getElementById("totalCost");
         const pageCostSpan = document.getElementById("pageCost");
         const extraCostSpan = document.getElementById("extraCost");
         const seoCostSpan = document.getElementById("seoCost");
         const designCostSpan = document.getElementById("designCost");
+        const basketCostSpan = document.getElementById("basketCost");
         const finalCostSpan = document.getElementById("finalCost");
         function generateCheckboxes() {
             extraFeaturesContainer.innerHTML = extraFeaturesData.map(feature => `
@@ -821,6 +841,16 @@
                 </span>
             </label>
         `).join('');
+        basketFeaturesContainer.innerHTML = basketFeaturesData.map(feature => `
+            <label for="${feature.id}" class="flex items-center space-x-4 cursor-pointer bg-gray-100 px-3 py-2 rounded-lg w-full">
+                <span class="text-gray-700">${feature.label}</span>
+                <span class="relative">
+                    <input id="${feature.id}" type="checkbox" value="${feature.price}" class="hidden peer" onclick="calculateTotal()">
+                    <div class="w-10 h-6 rounded-full shadow-inner bg-gray-300 peer-checked:bg-violet-600"></div>
+                    <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow bg-white peer-checked:right-0 peer-checked:left-auto"></div>
+                </span>
+            </label>
+        `).join('');
 
         }
         function calculateTotal() {
@@ -832,15 +862,19 @@
             document.querySelectorAll("#extraFeatures input:checked").forEach(cb => extraCost += parseInt(cb.value));
             let seoCost = 0;
             document.querySelectorAll("#seoFeatures input:checked").forEach(cb => seoCost += parseInt(cb.value));
-            let totalCost = extraCost + designCost + pageCost + seoCost;
+            let basketCost = 0;
+            document.querySelectorAll("#basketFeatures input:checked").forEach(cb => basketCost += parseInt(cb.value));
+            let totalCost = extraCost + designCost + pageCost + seoCost + basketCost;
 
             document.getElementById("pageCost").innerHTML = pageCost + " AZN";
             document.getElementById("seoCost").innerHTML = seoCost + " AZN";
+            document.getElementById("basketCost").innerHTML = basketCost + " AZN";
             document.getElementById("extraCost").innerHTML = extraCost + " AZN";
             document.getElementById("designPageCost").innerHTML = designCost + pageCost;
             document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
             document.getElementById("extraCostSummarySpan").innerHTML = extraCost;
             document.getElementById("seoCostSummarySpan").innerHTML = seoCost;
+            document.getElementById("basketCostSummarySpan").innerHTML = basketCost;
             document.getElementById("finalCost").innerHTML = totalCost;
             document.getElementById("pageCountValue").innerHTML = pageCount;
             document.getElementById("designComplexityValue").innerHTML = designComplexity == "1" ? "Sadə" : designComplexity == "2" ? "Orta" : "Xüsusi";
