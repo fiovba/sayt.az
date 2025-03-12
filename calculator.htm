@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.htm">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.5.3/keen-slider.min.css" rel="stylesheet">
+
+    <title>Veb saytların hazırlanması, Domain, Hosting satışı</title>
+</head>
+
+<body>
+    <header class="p-2 bg-white">
+        <div class="container flex justify-between h-16 mx-auto">
+            <div class="flex items-center">
+                <a rel="noopener noreferrer" href="index.htm" aria-label="Back to homepage"
+                    class="flex items-center pl-3">
+                    <img alt="logo" fetchpriority="high" width="114" height="32" decoding="async" data-nimg="1"
+                        class="w-[120px] h-auto min-w-[100px]" src="https://sayt.az/icons/saytaz.svg"
+                        style="color: transparent;">
+                </a>
+                <ul class="hidden lg:flex md:pl-2 lg:pl-5 lg:gap-3 gap-1">
+                    <li class="flex">
+                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Veb Sayt
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-[30%] pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton2" data-dropdown-toggle="dropdown2"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Domen
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown2"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-[30%] pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton2">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/khwNG7uXgAPtW9wilTtK12LaUADpZgeQb3UvOqvB.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Tibb Sayti
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Hostinq
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown3"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-[30%] pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton3">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton5" data-dropdown-toggle="dropdown5"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Xidmetler
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown5"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-[30%] pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton5">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/calculator.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Sayt Kalkulyatoru
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton6" data-dropdown-toggle="dropdown6"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Şirkət
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown6"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-[30%] pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton6">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/khwNG7uXgAPtW9wilTtK12LaUADpZgeQb3UvOqvB.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Tibb Sayti
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="items-center  lg:flex lg:gap-3">
+                <div class="flex">
+                    <select class="p-4 lg:text-md text-[#300b60] font-bold">
+                        <option value="">$</option>
+                        <option selected value="">₼</option>
+                    </select>
+                    <select class="p-4 lg:text-md text-[#300b60] font-bold">
+                        <option value="" selected>AZ</option>
+                        <option value="">ENG</option>
+                    </select>
+                </div>
+                <div class="hidden lg:flex lg:gap-3">
+                    <button
+                        class="px-3 py-2 font-semibold rounded-lg bg-gradient-to-r from-purple-700 to-red-200 text-white text-sm">Qiymət
+                        Təklifi Al</button>
+                    <button
+                        class=" px-3 py-2 font-semibold rounded-lg border-1 border-b-purple-500 text-purple-500 bg-white text-sm ">Daxil
+                        Ol</button>
+                </div>
+            </div>
+            <button class="p-4 lg:hidden" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6 dark:text-gray-800">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="sidebar"
+            class="p-5 fixed top-0 right-0 w-full sm:w-64 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-end p-4">
+                <button onclick="toggleMenu()" class="text-gray-500 hover:text-gray-800">
+                    ✕
+                </button>
+            </div>
+            <div class="flex flex-col scroll-auto">
+                <ul class="md:pl-10 lg:gap-3 scroll-auto">
+                    <li class="flex">
+                        <button id="dropdownDefaultButton7" data-dropdown-toggle="dropdown7"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Veb Sayt
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown7"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm  w-full  pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton7">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/khwNG7uXgAPtW9wilTtK12LaUADpZgeQb3UvOqvB.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Tibb sayti
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton8" data-dropdown-toggle="dropdown8"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Domen
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown8"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm  w-full pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton8">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/khwNG7uXgAPtW9wilTtK12LaUADpZgeQb3UvOqvB.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Tibb Sayti
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="http://api.websiteca.com/storage/vQyageZW9Eb4rKazAWwrY3xUTem15TN9Ofdk8oUk.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">E-ticarət saytları
+                                            <p class="text-sm text-gray-500">E-ticarət saytları</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton9" data-dropdown-toggle="dropdown9"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Hostinq
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown9"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm  w-full  pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton9">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/khwNG7uXgAPtW9wilTtK12LaUADpZgeQb3UvOqvB.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Tibb Sayti
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]"
+                                            src="https://api.websiteca.com/storage/fcdQoEskESpjwrkLUcNKqvm0ZFwzn7kAspkBfwI5.svg"
+                                            alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Kiçik biznes saytları
+                                            <p class="text-sm text-gray-500">Kiçik bizneslər üçün saytlar</p>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton10" data-dropdown-toggle="dropdown10"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Xidmetler
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown10"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-full pl-10">
+                            <ul class="py-2 overflow-y text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton10">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/calculator.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="calculator.htm" class="block py-2 px-4">Kalkulyator
+                                            <p class="text-sm text-gray-500">Saytın qiymətini öyrən</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <button id="dropdownDefaultButton11" data-dropdown-toggle="dropdown11"
+                            class="text-purple-950 bg-white font-bold lg:text-md px-2 py-2.5 text-center inline-flex items-center"
+                            type="button">
+                            Şirkət
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown menu -->
+                        <div id="dropdown11"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-full  pl-10">
+                            <ul class="py-2 text-sm text-gray-700 flex flex-col gap-5"
+                                aria-labelledby="dropdownDefaultButton11">
+                                <li class="flex">
+                                    <div class="hidden md:flex bg-[#dbeafe] p-2 rounded-lg">
+                                        <img class="w-[30px]" src="https://sayt.az/icons/website-program.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <a href="#" class="block py-2 px-4">Saytların hazırlanması
+                                            <p class="text-sm text-gray-500">Web saytların hazırlanması</p>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="items-center flex-shrink-0 lg:flex lg:gap-3">
+                <div class="flex flex-col gap-2">
+                    <button
+                        class="lg:px-5 py-2 font-semibold rounded-lg bg-gradient-to-r from-purple-700 to-red-200 text-white">Qiymət
+                        Təklifi Al</button>
+                    <button
+                        class="lg:px-5 py-2 font-semibold rounded-lg border-1 border-b-purple-500 text-purple-500 bg-white ">Daxil
+                        Ol</button>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div
+            class="md:max-w-7xl md:container md:mx-auto bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row w-full gap-6">
+            <div class="md:w-[70%] w-full flex flex-col justify-center">
+                <h1 class="lg:text-5xl text-3xl font-extrabold mb-4 py-4">Qiymət təklifi al</h1>
+
+                <p class="text-lg font-medium">Statik səhifələr</p>
+                <div class="w-full bg-[#f8f8fa] p-7">
+
+                    <div class="flex gap-4">
+                        <span class="bg-purple-500 text-white text-center px-3 rounded-xl h-[40px] pt-2 mt-5">1</span>
+                        <label class="block mt-2">
+                            Neçə statik səhifə olacaq? <span id="pageCountValue">1</span>
+                            <input type="range" value="1" min="1" max="20" id="pageCount"
+                                class="w-full mt-2 slider bg-purple-600" oninput="calculateTotal()">
+                        </label>
+                        <span class="bg-purple-500 text-white text-center px-2 rounded-xl h-[40px] pt-2 mt-5">20</span>
+                    </div>
+                    <div class="w-full mt-4">
+                        <p class="text-lg font-medium">Dizayn mürəkkəbliyi:</p>
+                        <input type="range" id="designComplexity" min="1" max="3" value="1" class="slider w-[60%] mt-2"
+                            oninput="calculateTotal()">
+                        <span id="designComplexityValue" class="font-semibold">Sadə</span>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
+                        Xərc: <span id="designPageCost">0</span> AZN
+                    </div>
+                </div>
+
+                <div>
+                    <div class="w-full mt-6">
+                        <h1 class="text-lg font-semibold mb-2">Vebsayt əlavələri</h1>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="extraFeatures"></div>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
+                        Xərc: <span id="extraCostSummarySpan">0</span> AZN
+                    </div>
+                </div>
+
+                <div>
+                    <div class="w-full mt-6">
+                        <h1 class="text-lg font-semibold mb-2">Axtarış motorunun optimallaşdırılması</h1>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="seoFeatures"></div>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
+                        Xərc: <span id="seoCostSummarySpan">0</span> AZN
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-[30%] w-full flex flex-col gap-10 bg-gray-50 p-6 rounded-lg shadow-md">
+                <h1 class="text-2xl font-semibold">Təklifimiz:</h1>
+                <div class="w-full flex flex-col gap-5">
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">Statik səhifələr:</span>
+                        <span id="pageCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">Əlavələr:</span>
+                        <span id="extraCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">Dizayn mürəkkəbliyi:</span>
+                        <span id="designCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
+                    <div class="mt-4 text-gray-600">Qeyd: Bu təxmini dəyərdir.</div>
+                </div>
+                <div class="mt-6 text-lg font-bold text-white bg-purple-500 p-5 text-center">
+                    Ümumi dəyər: <span id="finalCost">0</span> AZN
+                </div>
+                <button class="bg-[#2bc48a] font-bold text-md rounded-lg w-full p-5 text-white">Saytınızı indi sifariş
+                    edin.</button>
+            </div>
+        </div>
+
+    </main>
+    <footer class="bg-[#faf4ff] w-full">
+        <div class="flex flex-col md:container md:max-w-7xl md:mx-auto p-5">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class=" flex flex-col gap-4">
+                    <img class="w-[30%]" src="https://sayt.az/icons/saytaz.svg" alt="">
+                    <p class="py-10 w-[80%] text-sm text-[#6829c7]">Sayt.az - Web saytların hazırlanması, Domain,
+                        Hosting satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+                    <h1 class=" text-purple-900 font-bold text-xl">Bizi izleyin!</h1>
+                    <div class="flex flex-row gap-2 md:gap-4 flex-wrap text-3xl text-[#6829c7]">
+
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+                <div class=" flex  flex-col md:flex-row gap-10 pl-5">
+                    <div class="flex flex-col gap-3 text-purple-900 font-bold text-xl">
+                        <h1 class="text-2xl text-purple-950 font-extrabold py-5">Hostinq & Domen</h1>
+                        <a href="">Domen</a><a href="">Web Hostinq</a><a href="">VPS Hostinq</a><a href="">Server</a>
+                    </div>
+                    <div class="flex flex-col gap-3 text-purple-900 font-bold text-xl">
+                        <h1 class="text-2xl text-purple-950 font-extrabold py-5">Şirkət</h1>
+                        <a href="">Haqqımızda</a><a href="">Əlaqə</a><a href="">Bloq</a><a href="">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row md:justify-between pt-20">
+                <div class="text-purple-700 text-sm">© Copyright 2004-2025 © Sayt.az . Bütün Hüquqlar Qorunur.</div>
+                <div class="flex flex-col md:flex-row gap-3 text-purple-800">
+                    <div><i class="fa-solid fa-phone"></i> +(99470) 330-00-04</div>
+                    <div><i class="fa-solid fa-envelope"></i> support@sayt.az</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const basePagePrice = 100;
+        const designMultipliers = { "1": 1, "2": 1.5, "3": 2 };
+        const seoFeaturesData = [
+            { id: 'meta', label: 'Başlıqlar & Meta', price: 50 },
+            { id: 'keyword', label: 'Açar söz', price: 40 },
+            { id: 'advanced', label: '+20 Qabaqcıl Texnika', price: 70 },
+            { id: 'sitemap', label: 'Sitemap', price: 30 },
+        ];
+        const extraFeaturesData = [
+            { id: 'blog', label: 'Blog', price: 50 },
+            { id: 'membership', label: 'Üzv girişi', price: 100 },
+            { id: 'responsive', label: 'Responsive', price: 30 },
+            { id: 'forum', label: 'Forum', price: 80 },
+            { id: 'messaging', label: 'Mesajlaşma', price: 60 },
+            { id: 'liveChat', label: 'Canlı Söhbət', price: 70 },
+            { id: 'gallery', label: 'Qalereya', price: 40 },
+            { id: 'contactForm', label: 'Əlaqə Forması', price: 20 },
+            { id: 'reservation', label: 'Rezervasyon', price: 90 },
+            { id: 'socialMedia', label: 'Sosial Media inteqrasiyası', price: 40 },
+            { id: 'analytics', label: 'Analitika / İzləmə', price: 70 },
+            { id: 'adminPanel', label: 'Admin Panel', price: 150 },
+            { id: 'seo', label: 'Axtarış motorunun optimallaşdırılması', price: 120 },
+            { id: 'payment', label: 'Ödəniş', price: 100 },
+            { id: 'cart', label: 'Səbət', price: 80 },
+            { id: 'products', label: 'Məhsullar', price: 60 },
+            { id: 'wishlist', label: 'Bəyəndiklərim', price: 40 },
+            { id: 'filter', label: 'Filtr', price: 50 },
+            { id: 'productDetails', label: 'Məhsul Haqqında', price: 70 }
+        ];
+        const pageCountInput = document.getElementById("pageCount");
+        const pageCountValue = document.getElementById("pageCountValue");
+        const designComplexityInput = document.getElementById("designComplexity");
+        const designComplexityValue = document.getElementById("designComplexityValue");
+        const extraFeaturesContainer = document.getElementById("extraFeatures");
+        const seoFeaturesContainer = document.getElementById("seoFeatures");
+        const totalCostSpan = document.getElementById("totalCost");
+        const pageCostSpan = document.getElementById("pageCost");
+        const extraCostSpan = document.getElementById("extraCost");
+        const seoCostSpan = document.getElementById("seoCost");
+        const designCostSpan = document.getElementById("designCost");
+        const finalCostSpan = document.getElementById("finalCost");
+        function generateCheckboxes() {
+            extraFeaturesContainer.innerHTML = extraFeaturesData.map(feature => `
+            <label for="${feature.id}" class="flex items-center space-x-4 cursor-pointer bg-gray-100 px-3 py-2 rounded-lg w-full">
+                <span class="text-gray-700">${feature.label}</span>
+                <span class="relative">
+                    <input id="${feature.id}" type="checkbox" value="${feature.price}" class="hidden peer" onclick="calculateTotal()">
+                    <div class="w-10 h-6 rounded-full shadow-inner bg-gray-300 peer-checked:bg-violet-600"></div>
+                    <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow bg-white peer-checked:right-0 peer-checked:left-auto"></div>
+                </span>
+            </label>
+        `).join('');
+            seoFeaturesContainer.innerHTML = seoFeaturesData.map(feature => `
+            <label for="${feature.id}" class="flex items-center space-x-4 cursor-pointer bg-gray-100 px-3 py-2 rounded-lg w-full">
+                <span class="text-gray-700">${feature.label}</span>
+                <span class="relative">
+                    <input id="${feature.id}" type="checkbox" value="${feature.price}" class="hidden peer" onclick="calculateTotal()">
+                    <div class="w-10 h-6 rounded-full shadow-inner bg-gray-300 peer-checked:bg-violet-600"></div>
+                    <div class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow bg-white peer-checked:right-0 peer-checked:left-auto"></div>
+                </span>
+            </label>
+        `).join('');
+
+        }
+        function calculateTotal() {
+            const pageCount = parseInt(document.getElementById("pageCount").value);
+            const designComplexity = document.getElementById("designComplexity").value;
+            let pageCost = pageCount * 100;
+            let designCost = pageCost * ({ "1": 1, "2": 1.5, "3": 2 }[designComplexity] - 1);
+            let extraCost = 0;
+            document.querySelectorAll("#extraFeatures input:checked").forEach(cb => extraCost += parseInt(cb.value));
+            let seoCost = 0;
+            document.querySelectorAll("#seoFeatures input:checked").forEach(cb => seoCost += parseInt(cb.value));
+            let totalCost = extraCost + designCost + pageCost + seoCost;
+
+            document.getElementById("pageCost").innerHTML = pageCost + " AZN";
+            document.getElementById("extraCost").innerHTML = extraCost + " AZN";
+            document.getElementById("designPageCost").innerHTML = pageCost + designCost;
+            document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
+            document.getElementById("extraCostSummarySpan").innerHTML = extraCost;
+            document.getElementById("seoCostSummarySpan").innerHTML = seoCost;
+            document.getElementById("finalCost").innerHTML = totalCost;
+            document.getElementById("pageCountValue").innerHTML = pageCount;
+            document.getElementById("designComplexityValue").innerHTML = designComplexity == "1" ? "Sadə" : designComplexity == "2" ? "Orta" : "Xüsusi";
+        }
+
+        generateCheckboxes();
+        calculateTotal();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
