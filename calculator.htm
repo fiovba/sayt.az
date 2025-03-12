@@ -706,6 +706,10 @@
                         <span class="text-gray-500 font-bold">Dizayn mürəkkəbliyi:</span>
                         <span id="designCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
                     </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">SEO:</span>
+                        <span id="seoCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
                     <div class="mt-4 text-gray-600">Qeyd: Bu təxmini dəyərdir.</div>
                 </div>
                 <div class="mt-6 text-lg font-bold text-white bg-purple-500 p-5 text-center">
@@ -823,7 +827,7 @@
             const pageCount = parseInt(document.getElementById("pageCount").value);
             const designComplexity = document.getElementById("designComplexity").value;
             let pageCost = pageCount * 100;
-            let designCost = pageCost * ({ "1": 1, "2": 1.5, "3": 2 }[designComplexity] - 1);
+            let designCost = 100* ({ "1": 1, "2": 1.5, "3": 2 }[designComplexity] - 1);
             let extraCost = 0;
             document.querySelectorAll("#extraFeatures input:checked").forEach(cb => extraCost += parseInt(cb.value));
             let seoCost = 0;
@@ -831,8 +835,9 @@
             let totalCost = extraCost + designCost + pageCost + seoCost;
 
             document.getElementById("pageCost").innerHTML = pageCost + " AZN";
+            document.getElementById("seoCost").innerHTML = seoCost + " AZN";
             document.getElementById("extraCost").innerHTML = extraCost + " AZN";
-            document.getElementById("designPageCost").innerHTML = pageCost + designCost;
+            document.getElementById("designPageCost").innerHTML = designCost + pageCost;
             document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
             document.getElementById("extraCostSummarySpan").innerHTML = extraCost;
             document.getElementById("seoCostSummarySpan").innerHTML = seoCost;
