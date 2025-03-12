@@ -698,6 +698,15 @@
                         <span class="text-gray-500 text-sm">Xərc:</span> <span id="basketCostSummarySpan">0</span> 
                     </div>
                 </div>
+                <div class="w-full mt-4">
+                    <p class="text-lg font-medium">Logo mürəkkəbliyi:</p>
+                    <input type="range" id="logoComplexity" min="1" max="3" value="1" class="slider w-[60%] mt-2"
+                        oninput="calculateTotal()">
+                    <span id="logoComplexityValue" class="font-semibold">Sadə</span>
+                </div>
+                <div class="mt-6 text-lg text-purple-500 p-5 font-semibold w-full bg-[#dee7f1] flex justify-between">
+                    <span class="text-gray-500 text-sm">Xərc:</span><span id="logoPageCost">0</span>
+                </div>
             </div>
 
             <div class="md:w-[30%] w-full flex flex-col gap-10 bg-gray-50 p-6 rounded-lg shadow-md">
@@ -722,6 +731,10 @@
                     <div class="flex justify-between">
                         <span class="text-gray-500 font-bold">Elektron ticarət əlavələri:</span>
                         <span id="basketCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-500 font-bold">Logo:</span>
+                        <span id="logoCost" class="text-purple-500 font-extrabold text-md px-4">0 AZN</span>
                     </div>
                     <div class="mt-4 text-gray-600">Qeyd: Bu təxmini dəyərdir.</div>
                 </div>
@@ -774,6 +787,7 @@
     <script>
         const basePagePrice = 100;
         const designMultipliers = { "1": 1, "2": 1.5, "3": 2 };
+        const logoMultipliers = { "1": 1, "2": 1.5, "3": 2 };
         const seoFeaturesData = [
             { id: 'meta', label: 'Başlıqlar & Meta', price: 50 },
             { id: 'keyword', label: 'Açar söz', price: 40 },
@@ -808,8 +822,11 @@
         ];
         const pageCountInput = document.getElementById("pageCount");
         const pageCountValue = document.getElementById("pageCountValue");
+        const logoPageCost = document.getElementById("logoPageCost");
         const designComplexityInput = document.getElementById("designComplexity");
+        const logoComplexityInput = document.getElementById("logoComplexity");
         const designComplexityValue = document.getElementById("designComplexityValue");
+        const logoComplexityValue = document.getElementById("logoComplexityValue");
         const extraFeaturesContainer = document.getElementById("extraFeatures");
         const seoFeaturesContainer = document.getElementById("seoFeatures");
         const basketFeaturesContainer = document.getElementById("basketFeatures");
@@ -819,6 +836,7 @@
         const seoCostSpan = document.getElementById("seoCost");
         const designCostSpan = document.getElementById("designCost");
         const basketCostSpan = document.getElementById("basketCost");
+        const logoCostSpan = document.getElementById("logoCost");
         const finalCostSpan = document.getElementById("finalCost");
         function generateCheckboxes() {
             extraFeaturesContainer.innerHTML = extraFeaturesData.map(feature => `
@@ -856,15 +874,17 @@
         function calculateTotal() {
             const pageCount = parseInt(document.getElementById("pageCount").value);
             const designComplexity = document.getElementById("designComplexity").value;
+            const logoComplexity = document.getElementById("logoComplexity").value;
             let pageCost = pageCount * 100;
             let designCost = 100* ({ "1": 1, "2": 1.5, "3": 2 }[designComplexity] - 1);
+            let logoCost = 100* ({ "1": 1, "2": 1.5, "3": 2 }[logoComplexity] - 1);
             let extraCost = 0;
             document.querySelectorAll("#extraFeatures input:checked").forEach(cb => extraCost += parseInt(cb.value));
             let seoCost = 0;
             document.querySelectorAll("#seoFeatures input:checked").forEach(cb => seoCost += parseInt(cb.value));
             let basketCost = 0;
             document.querySelectorAll("#basketFeatures input:checked").forEach(cb => basketCost += parseInt(cb.value));
-            let totalCost = extraCost + designCost + pageCost + seoCost + basketCost;
+            let totalCost = extraCost + designCost + pageCost + seoCost + basketCost+logoCost;
 
             document.getElementById("pageCost").innerHTML = pageCost + " AZN";
             document.getElementById("seoCost").innerHTML = seoCost + " AZN";
@@ -872,12 +892,15 @@
             document.getElementById("extraCost").innerHTML = extraCost + " AZN";
             document.getElementById("designPageCost").innerHTML = designCost + pageCost + " AZN";
             document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
+            document.getElementById("logoCost").innerHTML = logoCost.toFixed(2) + " AZN";
             document.getElementById("extraCostSummarySpan").innerHTML = extraCost + " AZN";
             document.getElementById("seoCostSummarySpan").innerHTML = seoCost + " AZN";
             document.getElementById("basketCostSummarySpan").innerHTML = basketCost + " AZN";
             document.getElementById("finalCost").innerHTML = totalCost;
             document.getElementById("pageCountValue").innerHTML = pageCount;
+            document.getElementById("logoPageCost").innerHTML = logoCost + " AZN";
             document.getElementById("designComplexityValue").innerHTML = designComplexity == "1" ? "Sadə" : designComplexity == "2" ? "Orta" : "Xüsusi";
+            document.getElementById("logoComplexityValue").innerHTML = logoComplexity == "1" ? "Sadə" : logoComplexity == "2" ? "Orta" : "Xüsusi";
         }
 
         generateCheckboxes();
