@@ -653,7 +653,7 @@
                     <div class="flex gap-4">
                         <span class="bg-purple-500 text-white text-center px-3 rounded-xl h-[40px] pt-2 mt-5">1</span>
                         <label class="block mt-2">
-                            Neçə statik səhifə olacaq? <span id="pageCountValue">1</span>
+                            Neçə statik səhifə olacaq?
                             <input type="range" value="1" min="1" max="20" id="pageCount"
                                 class="w-full mt-2 slider bg-purple-600" oninput="calculateTotal()">
                         </label>
@@ -665,8 +665,8 @@
                             oninput="calculateTotal()">
                         <span id="designComplexityValue" class="font-semibold">Sadə</span>
                     </div>
-                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
-                        Xərc: <span id="designPageCost">0</span> AZN
+                    <div class="mt-6 text-lg text-purple-500 p-5 font-semibold w-full bg-[#dee7f1] flex justify-between">
+                        <span class="text-gray-500 text-sm">Xərc:</span><span><span id="pageCountValue">1</span> <span>səhifə  /</span> <span id="designPageCost">0</span> </span>
                     </div>
                 </div>
 
@@ -675,8 +675,8 @@
                         <h1 class="text-lg font-semibold mb-2">Vebsayt əlavələri</h1>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="extraFeatures"></div>
                     </div>
-                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
-                        Xərc: <span id="extraCostSummarySpan">0</span> AZN
+                    <div class="mt-6 text-lg text-purple-500 p-5 font-semibold w-full bg-[#dee7f1] flex justify-between">
+                        <span class="text-gray-500 text-sm">Xərc:</span>  <span id="extraCostSummarySpan">0</span> 
                     </div>
                 </div>
 
@@ -685,8 +685,8 @@
                         <h1 class="text-lg font-semibold mb-2">Axtarış motorunun optimallaşdırılması</h1>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="seoFeatures"></div>
                     </div>
-                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
-                        Xərc: <span id="seoCostSummarySpan">0</span> AZN
+                    <div class="mt-6 text-lg text-purple-500 p-5 font-semibold w-full bg-[#dee7f1] flex justify-between">
+                        <span class="text-gray-500 text-sm">Xərc:</span>  <span id="seoCostSummarySpan">0</span> 
                     </div>
                 </div>
                 <div>
@@ -694,8 +694,8 @@
                         <h1 class="text-lg font-semibold mb-2">Elektron ticarət əlavələri</h1>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="basketFeatures"></div>
                     </div>
-                    <div class="mt-6 text-sm text-gray-600 p-5 font-semibold w-full bg-[#dee7f1]">
-                        Xərc: <span id="basketCostSummarySpan">0</span> AZN
+                    <div class="mt-6 text-lg text-purple-500 p-5 font-semibold w-full bg-[#dee7f1] flex justify-between">
+                        <span class="text-gray-500 text-sm">Xərc:</span> <span id="basketCostSummarySpan">0</span> 
                     </div>
                 </div>
             </div>
@@ -870,11 +870,11 @@
             document.getElementById("seoCost").innerHTML = seoCost + " AZN";
             document.getElementById("basketCost").innerHTML = basketCost + " AZN";
             document.getElementById("extraCost").innerHTML = extraCost + " AZN";
-            document.getElementById("designPageCost").innerHTML = designCost + pageCost;
+            document.getElementById("designPageCost").innerHTML = designCost + pageCost + " AZN";
             document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
-            document.getElementById("extraCostSummarySpan").innerHTML = extraCost;
-            document.getElementById("seoCostSummarySpan").innerHTML = seoCost;
-            document.getElementById("basketCostSummarySpan").innerHTML = basketCost;
+            document.getElementById("extraCostSummarySpan").innerHTML = extraCost + " AZN";
+            document.getElementById("seoCostSummarySpan").innerHTML = seoCost + " AZN";
+            document.getElementById("basketCostSummarySpan").innerHTML = basketCost + " AZN";
             document.getElementById("finalCost").innerHTML = totalCost;
             document.getElementById("pageCountValue").innerHTML = pageCount;
             document.getElementById("designComplexityValue").innerHTML = designComplexity == "1" ? "Sadə" : designComplexity == "2" ? "Orta" : "Xüsusi";
