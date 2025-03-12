@@ -647,10 +647,9 @@
             <div class="md:w-[70%] w-full flex flex-col justify-center">
                 <h1 class="lg:text-5xl text-3xl font-extrabold mb-4 py-4">Qiymət təklifi al</h1>
 
-                <p class="text-lg font-medium">Statik səhifələr</p>
-                <div class="w-full bg-[#f8f8fa] p-7">
-
-                    <div class="flex gap-4">
+                <p class="text-lg font-medium py-4">Statik səhifələr</p>
+                <div class="w-full bg-[#f8f8fa] py-7">
+                    <div class="flex gap-4 px-4">
                         <span class="bg-purple-500 text-white text-center px-3 rounded-xl h-[40px] pt-2 mt-5">1</span>
                         <label class="block mt-2">
                             Neçə statik səhifə olacaq?
@@ -659,7 +658,7 @@
                         </label>
                         <span class="bg-purple-500 text-white text-center px-2 rounded-xl h-[40px] pt-2 mt-5">20</span>
                     </div>
-                    <div class="w-full mt-4">
+                    <div class="w-full mt-4 px-4">
                         <p class="text-lg font-medium">Dizayn mürəkkəbliyi:</p>
                         <input type="range" id="designComplexity" min="1" max="3" value="1" class="slider w-[60%] mt-2"
                             oninput="calculateTotal()">
@@ -891,8 +890,8 @@
             document.getElementById("basketCost").innerHTML = basketCost + " AZN";
             document.getElementById("extraCost").innerHTML = extraCost + " AZN";
             document.getElementById("designPageCost").innerHTML = designCost + pageCost + " AZN";
-            document.getElementById("designCost").innerHTML = designCost.toFixed(2) + " AZN";
-            document.getElementById("logoCost").innerHTML = logoCost.toFixed(2) + " AZN";
+            document.getElementById("designCost").innerHTML = designCost + " AZN";
+            document.getElementById("logoCost").innerHTML = logoCost + " AZN";
             document.getElementById("extraCostSummarySpan").innerHTML = extraCost + " AZN";
             document.getElementById("seoCostSummarySpan").innerHTML = seoCost + " AZN";
             document.getElementById("basketCostSummarySpan").innerHTML = basketCost + " AZN";
